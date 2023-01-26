@@ -6,7 +6,7 @@ PID=$!
 export DISPLAY=:99
 
 # execute script
-/usr/bin/python3 inverter_read.py
+/usr/bin/python3 inverter_read.py $1
 
 echo $?
 

@@ -1,4 +1,4 @@
-Automatic PDF certificates creation from .xml files with Firefox
+Fetching data from Elnix inverter with selenium.
 -
 
 **Install requirements:**
@@ -6,7 +6,7 @@ Automatic PDF certificates creation from .xml files with Firefox
 # install dependencies
 sudo apt update
 sudo apt install python3 python3-pip xvfb
-pip3 install 'selenium<4.0.0'
+pip3 install 'selenium<4.0.0' argparse
 
 # Get proper package for your distribution
 sudo apt install firefox/firefox-esr-l10n-en-gb 
@@ -16,8 +16,7 @@ sudo pip3 install webdrivermanager
 sudo webdrivermanager firefox --linkpath /usr/local/bin
 ```
 
-**Run**:  `./WebsiteMaker.py`
+**Run**:  `./run.sh`
 
-Remember to have actual geckodriver for firefox.
-
-File "strona.txt", should be in upper directory with login and password to cert site on two last lines.
+Script emulate firefox site with fake X11 server.
+Then it's accessing proper fields with javascript.

@@ -2,8 +2,10 @@
 from selenium import webdriver
 from datetime import date
 from time import sleep
+import sys
 
-file = "data.csv"
+# Call parameters
+file =  sys.argv[1]
 
 # variables
 exit_code = 0
